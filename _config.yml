@@ -79,7 +79,7 @@ pageviews:
 # Prefer color scheme setting.
 #
 # Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
+# and there will be a toggle to switch the theme between dark and lightassets
 # on the bottom left of the sidebar.
 #
 # Available options:
@@ -217,6 +217,9 @@ exclude:
   - LICENSE
   - "*.config.js"
   - package*.json
+
+include:
+  - "_next"
 
 jekyll-archives:
   enabled: [categories, tags]
