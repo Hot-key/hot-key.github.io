@@ -56,6 +56,9 @@ jobs:
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
+      - name: Copy public to root
+        run: cp -r ./public/* "_site${{ steps.pages.outputs.base_path }}"
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
