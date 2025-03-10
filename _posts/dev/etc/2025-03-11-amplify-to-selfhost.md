@@ -180,8 +180,8 @@ docker system prune -af
 컨테이너 실행이 확인되면 `sed`로 새로 돌아가는 컨테이너가 메인이 되도록 컨피그 파일을 수정하고 기존에 돌아가던 도커를 종료시킨다.  
 
 ### github action
-마지막으로 이 모든걸 돌릴 github action을 만들면 완성
-
+마지막으로 이 모든걸 돌릴 github action을 만들면 완성  
+{% raw %}
 ```yml
 name: Deploy to Azure
 
@@ -286,6 +286,7 @@ jobs:
             Status: ${{ job.status }}
           embed-color: ${{ job.status == 'success' && '65280' || '16711680' }}
 ```
+{% endraw %}
 나중에 다른 서버를 추가할 수 있도록 matrix를 이용했다.  
 
 ## 한계점 및 고려사항
